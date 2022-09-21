@@ -3,18 +3,55 @@
 {% block title %}Hello SiteController!{% endblock %}
 
 {% block body %}
+<link href="http://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    * {
+        font-family: 'Segoe UI', sans-serif;
+    }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/duchenec/Documents/Modèles Office personnalisés/Bulma/colemeon/colemeon/src/Controller/SiteController.php'|file_link(0) }}">src/Controller/SiteController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/duchenec/Documents/Modèles Office personnalisés/Bulma/colemeon/colemeon/templates/site/index.html.twig'|file_link(0) }}">templates/site/index.html.twig</a></code></li>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <img class="navbar-brand" href="#" src="assets/logo.png" max-width:"100vh" >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarColor01">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Prestation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">|</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Se connecter</a>
+        </li>
+       
     </ul>
-</div>
+       
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <img style="margin-top: 100px;  width:500px" src="assets/ampoule.png">
+    </div>
+    <div class="col" style="height:500px">
+      <h1 style="margin-top: 300px; font-size:50px "> <strong>AVEC NOUS, C'EST LE COUP DE FOUDRE ASSURE!</strong></h1>
+      <p>_____________________________</p>
+      <p>Bienvenue sur le site de 3Cables</p>
+      <button type="button" class="btn btn-primary">Découvrir</button>
+    </div>
+  </div>
 {% endblock %}
