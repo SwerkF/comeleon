@@ -8,7 +8,7 @@
 ![Logo](https://cdn.discordapp.com/attachments/365974442939252736/1020388759537205309/unknown.png)
 
 ## Présentation 🎉
-3cables est l'entreprise de Monsieur A. GALISSARD. Celui ci à contacté Colemeon afin de créer un site pour son entreprise de plomberie nommé "3cables".
+3cables est l'entreprise de Monsieur A. GALISSARD. Celui-ci à contacté Colemeon afin de créer un site pour son entreprise de plomberie nommé "3cables".
 
 ## Description 📝
 
