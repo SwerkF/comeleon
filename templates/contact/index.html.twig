@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1 class="text-decoration-underline " class="text-warning"><center>Bienvenue sur notre page d'avis</center></h1></br>
+<form method="POST" >
+    <table class="table table-striped">   
+    <tr>
+    <td><center><input type="text"  size="32"  placeholder="Votre nom" name="login" required></center></td>
+    <td><center><input type="text"  size="32"  placeholder=" Votre prénom" name="firstname" required></center></td></tr>
+    <tr>
+    <td><center><input type="text"  size="32"  placeholder="Votre adresse email" name="email" required></center></td>
+    <td><center><input type="text"  size="32"  placeholder="Votre numéro de téléphone" name="téléphone" required></center></td></tr>
+    <tr>
+    <td><center><input type="text"  size="32"  placeholder="Votre adresse" name="adresse" required></center></td>
+    <td><center><input type="text"  size="32"  placeholder=" Sujet de votre message" required></center></td></tr>
+    <tr>
+    <td><center><input type="text"  size="72"  placeholder="Votre message"  required></center></td>
+    <td><center><button type="submit" class="btn">Contacter</button></center></td>
+{% endblock %}

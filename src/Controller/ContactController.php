@@ -6,16 +6,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ConnexionController extends AbstractController
+class ContactController extends AbstractController
 {
     /**
-     * @Route("/connexion", name="app_connexion")
+     * @Route("/contact", name="app_contact")
      */
     public function index(): Response
     {
-    
-        return $this->render('connexion/index.html.twig', [
-            'controller_name' => 'ConnexionController',
+        return $this->render('contact/index.html.twig', [
+            'controller_name' => 'ContactController',
         ]);
     }
 }
