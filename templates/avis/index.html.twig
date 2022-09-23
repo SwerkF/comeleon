@@ -2,17 +2,35 @@
 
 {% block title %}Hello AvisController!{% endblock %}
 {% block body %}
-
-<h1></center>Bienvenue sur notre page d'avis</center></h1>
-<form method="POST">
+<div class="container">
+<h1 class="sublined"><center>Bienvenue sur notre page d'avis</center></h1></br>
+<form method="POST" action="site/create_avis">
     <table class="table table-striped">   
     <tr>
     <td><center><input type="text" id="loginUser" size="32"  placeholder="Votre nom" name="login" required></center></td>
     <td><center><input type="text" id="fisrtnameUser" size="32"  placeholder=" Votre prénom" name="firstname" required></center></td></tr>
     <tr>
-    <td><center><input type="text" id="adressUser" size="32"  placeholder="Votre avis" name="adress" required></center></td>
+    <td><center><input type="text"  size="72"  placeholder="Votre avis"  required></center></td>
+    <td><center><input type="button" name="Enregistrer"  value="Enregistrer"/></center></td>
    
-            </table>
+            </table></br>
+            
+       <h1><center>Liste de nos avis</center></h1></br>     
+    <table class="table table-striped">   
+    <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Avis</th>
+    </tr>
+    {% for avis in avis %}
+     <tr>
+        <td>{{avis.nom}}</td> 
+        <td>{{avis.prenom}}</td> 
+        <td>{{avis.commentaire}}</td> 
+    </tr>
+         
+    {% endfor %}
+    </table>
             </form>
-
+</div>
 {% endblock %}

@@ -21,4 +21,17 @@ class AvisController extends AbstractController
             'avis'=>$avis
         ]);
     }
-}
+    /**
+     * @Route("/create_avis", name="app_avis")
+     */
+    /*
+    public function createNewAvis()
+    {
+       $avis=new Avis();
+       $avis->setNom('');
+       $avis->setPrenom('');
+       $avis->setCommentaire('');
+   
+}*/
+    }
+
