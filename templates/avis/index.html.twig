@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AvisController!{% endblock %}
+{% block body %}
+
+<h1></center>Bienvenue sur notre page d'avis</center></h1>
+<form method="POST">
+    <table class="table table-striped">   
+    <tr>
+    <td><center><input type="text" id="loginUser" size="32"  placeholder="Votre nom" name="login" required></center></td>
+    <td><center><input type="text" id="fisrtnameUser" size="32"  placeholder=" Votre prénom" name="firstname" required></center></td></tr>
+    <tr>
+    <td><center><input type="text" id="adressUser" size="32"  placeholder="Votre avis" name="adress" required></center></td>
+   
+            </table>
+            </form>
+
+{% endblock %}
