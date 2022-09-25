@@ -24,6 +24,9 @@
     </head>
     <body>
 <style>
+html {
+  scroll-behavior: smooth;
+}
     * {
         font-family: 'Montserrat', sans-serif;
     }
@@ -32,7 +35,6 @@
         background: url("assets/back.jpg") repeat scroll 0
     }
     .glass-bg {
-/* From https://css.glass */
     background: rgba(255, 255, 255, 0.10);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -155,7 +157,7 @@
             <a class="nav-link active">|</a>
         </li>
         {% if app.user %} 
-        <li><p data-aos="fade-up" data-aos-delay="700" style="color:white"> Connecté avec :<br>{{ app.user.nom}} {{ app.user.prenom}} </p></li>
+        <li><p data-aos="fade-up" data-aos-delay="700" style="color:white"> Connecté avec :<br>{{ app.user.nom }} {{ app.user.prenom }} </p></li>
             <li data-aos="fade-up" data-aos-delay="700" class="nav-item">
                 <a class="nav-link active" href=""><i class="fa-solid fa-gear"></i> </i> Mon compte</a>
             </li>
@@ -176,7 +178,7 @@
         {% block body %}{% endblock %}
     </body>
 <footer class="text-center bg-primary">
-        <div class="container text-muted py-4 py-lg-5">
+        <div class="container text-muted py-4 py-lg-5" style="color:white; font-weight:500">
            
             <p class="mb-0">Made with ❤️ by Colomeon for 3Cables.</p>
             <p class="mb-0"></p>
