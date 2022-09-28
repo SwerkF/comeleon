@@ -24,10 +24,24 @@
     </head>
     <body>
 <style>
+html {
+  scroll-behavior: smooth;
+}
     * {
         font-family: 'Montserrat', sans-serif;
     }
-
+    
+    body {
+        background: url("assets/back.jpg") repeat scroll 0
+    }
+    .glass-bg {
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.8px);
+    -webkit-backdrop-filter: blur(4.8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    }
     @keyframes ampoule {
         0% {
             transform: rotate(0deg);
@@ -48,6 +62,7 @@
             transform: rotate(0deg);
         }
     }
+
 
     .imgs {
         margin-left: auto;
@@ -124,26 +139,36 @@
     <divs class="collapse navbar-collapse justify-content-end" id="navbarColor01">
     <ul class="navbar-nav">
         <li data-aos="fade-up" data-aos-delay="100" class="nav-item">
-            <a class="nav-link active" href="#"><i class="fa-solid fa-house"></i> Home</a>
+            <a class="nav-link active" href="{{ path('app_site') }}"><i class="fa-solid fa-house"></i> Home</a>
         </li>
         <li data-aos="fade-up" data-aos-delay="200" class="nav-item">
-            <a class="nav-link active" href="#"><i class="fa-solid fa-at"></i> About</a>
+            <a class="nav-link active" href=""><i class="fa-solid fa-at"></i> About</a>
         </li>
         <li data-aos="fade-up" data-aos-delay="300" class="nav-item">
-            <a class="nav-link active" href="#"><i class="fa-solid fa-screwdriver-wrench"></i> Prestation</a>
+            <a class="nav-link active" href=""><i class="fa-solid fa-screwdriver-wrench"></i> Prestation</a>
         </li>
          <li data-aos="fade-up" data-aos-delay="400" class="nav-item">
-            <a class="nav-link active" href="#"><i class="fa-solid fa-star"></i> Avis</a>
+            <a class="nav-link active" href=""><i class="fa-solid fa-star"></i> Avis</a>
         </li>
         <li data-aos="fade-up" data-aos-delay="500" class="nav-item">
-            <a class="nav-link active" href="#"><i class="fa-solid fa-phone"></i> Contact</a>
+            <a class="nav-link active" href=""><i class="fa-solid fa-phone"></i> Contact</a>
         </li>
         <li data-aos="fade-up" data-aos-delay="600" class="nav-item">
             <a class="nav-link active">|</a>
         </li>
-        <li data-aos="fade-up" data-aos-delay="700" class="nav-item">
-            <a class="nav-link active" href="#"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</a>
-        </li>
+        {% if app.user %} 
+        <li><p data-aos="fade-up" data-aos-delay="700" style="color:white"> Connecté avec :<br>{{ app.user.nom }} {{ app.user.prenom }} </p></li>
+            <li data-aos="fade-up" data-aos-delay="700" class="nav-item">
+                <a class="nav-link active" href=""><i class="fa-solid fa-gear"></i> </i> Mon compte</a>
+            </li>
+                        <li data-aos="fade-up" data-aos-delay="800" class="nav-item">
+                <a class="nav-link active" href="{{ path('app_logout') }}"><i class="fa-solid fa-door-open"></i> Déconnexion</a>
+            </li>
+        {% else %}
+            <li data-aos="fade-up" data-aos-delay="700" class="nav-item">
+                <a class="nav-link active" href="{{ path('app_login') }}"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</a>
+            </li>
+        {% endif %}
        
     </ul>
        
@@ -153,7 +178,7 @@
         {% block body %}{% endblock %}
     </body>
 <footer class="text-center bg-primary">
-        <div class="container text-muted py-4 py-lg-5">
+        <div class="container text-muted py-4 py-lg-5" style="color:white; font-weight:500">
            
             <p class="mb-0">Made with ❤️ by Colomeon for 3Cables.</p>
             <p class="mb-0"></p>
