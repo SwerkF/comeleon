@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion{% endblock %}
+
+{% block body %}
+
+<div id="prestations" class="container glass-bg" style="font-weight:500; color:#000">
+    <h2 class="text-center">Gestion des prestations</h2><a href="{{ path('app_prestation_ajt') }}" class="btn btn-primary">Ajouter</a>
+    <div class="row">
+        <div class="col">
+            Libelle
+        </div>
+        <div class="col">
+            Description
+        </div>
+        <div class="col text-center">
+            Actions
+        </div>
+    </div>
+    {% for prestation in prestations %}
+    <div class="row">
+        <div class="col">
+            {{ prestation.libelle}}
+        </div>
+        <div class="col">
+            {{ prestation.description }}
+        </div>
+        <div class="col text-center">
+            <a href="/menu/prestations/edit/{{ prestation.id }}" class="btn btn-primary edit-prestation" data-id="{{ prestation.id }}">Modifier</a>
+            <a href="#" class="btn btn-danger delete-prestation" data-id="{{ prestation.id }}">Supprimer</a>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -22,6 +22,11 @@ class Prestations
      */
     private $libelle;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $description;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,6 +40,18 @@ class Prestations
     public function setLibelle(string $libelle): self
     {
         $this->libelle = $libelle;
+
+        return $this;
+    }
+
+    public function getdescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setdescription(string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }
