@@ -17,7 +17,7 @@ const prestations = document.getElementById('prestations');
 if(prestations){
     prestations.addEventListener('click', (e) => {
         if(e.target.className === 'btn btn-danger delete-prestation'){
-            if(confirm('Are you sure?')){
+            if(confirm('Voulez vous supprimer cette prestation?')){
                 const id = e.target.getAttribute('data-id');
     
                 fetch(`/menu/prestation/delete/${id}`, {
