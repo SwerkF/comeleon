@@ -12,6 +12,8 @@ function type() {
     var typed = new Typed('.title', options);
     
 }
+
+
 const prestations = document.getElementById('prestations');
 
 if(prestations){

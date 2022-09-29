@@ -4,34 +4,43 @@
 
 {% block body %}
 
-<div id="prestations" class="container glass-bg" style="font-weight:500; color:#000">
-    <h2 class="text-center">Gestion des prestations</h2><a href="{{ path('app_prestation_ajt') }}" class="btn btn-primary">Ajouter</a>
-    <div class="row">
-        <div class="col">
-            Libelle
+<div class="pb-5">
+    <div id="prestations" class="container glass-bg pb-5" style="font-weight:500; color:#000; height: 100vh; margin-top: 100px; box-sizing: border-box">
+        <h2 class="text-center mt-5" style="font-size:36px; font-weight:700">Gestion des prestations</h2>
+        <a href="{{ path('app_prestation_ajt') }}" class="btn btn-primary">Ajouter</a>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col" style="font-size:30px; font-weight:600">
+                Libelle
+            </div>
+            <div class="col" style="font-size:30px; font-weight:600">
+                Description
+            </div>
+            <div class="col text-center" style="font-size:30px; font-weight:600">
+                Actions
+            </div>
+            <div id="prestations" class="container" style="background-color:#000; font-size:1px; opacity: 0.4">&nbsp;</div>
         </div>
-        <div class="col">
-            Description
-        </div>
-        <div class="col text-center">
-            Actions
+        
+        <div class="pt-2">
+        {% for prestation in prestations %}
+            <div class="row pt-2">
+                <div class="col" style="font-size:26px">
+                    {{ prestation.libelle}}
+                </div>
+                <div class="col" style="font-size:16px">
+                    {{ prestation.description }}
+                </div>
+                <div class="col text-center" style="font-size:26px">
+                    <a href="/menu/prestations/edit/{{ prestation.id }}" class="btn btn-primary edit-prestation" data-id="{{ prestation.id }}">Modifier</a>
+                    <a href="#" class="btn btn-danger delete-prestation" data-id="{{ prestation.id }}">Supprimer</a>
+                </div>
+            </div>
+            <div id="prestations" class="container mt-2" style="background-color:#000; font-size:2px; opacity: 0.1">&nbsp;</div>
+        {% endfor %}
         </div>
     </div>
-    {% for prestation in prestations %}
-    <div class="row">
-        <div class="col">
-            {{ prestation.libelle}}
-        </div>
-        <div class="col">
-            {{ prestation.description }}
-        </div>
-        <div class="col text-center">
-            <a href="/menu/prestations/edit/{{ prestation.id }}" class="btn btn-primary edit-prestation" data-id="{{ prestation.id }}">Modifier</a>
-            <a href="#" class="btn btn-danger delete-prestation" data-id="{{ prestation.id }}">Supprimer</a>
-        </div>
-    </div>
-
-    {% endfor %}
 </div>
 
 {% endblock %}

@@ -42,7 +42,7 @@ class MenuController extends AbstractController
         ->add("libelle", TextType::class)
         ->add("description", TextType::class)
         ->add('save', SubmitType::class, array(
-            'label' => 'Create',
+            'label' => 'Ajouter',
             'attr' => array('class' => 'btn btn-success btn-block'),
         ))
         ->getForm();
@@ -74,7 +74,7 @@ class MenuController extends AbstractController
         ->add("libelle", TextType::class)
         ->add("description", TextType::class)
         ->add('save', SubmitType::class, array(
-            'label' => 'Create',
+            'label' => 'Appliquer',
             'attr' => array('class' => 'btn btn-success btn-block'),
         ))
         ->getForm();
