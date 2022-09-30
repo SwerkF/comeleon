@@ -23,15 +23,11 @@ class Avis
     private $commentaire;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Connexion::class, inversedBy="avis")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="avis")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $idUtilisateur;
+    private $idUserAvis;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function getCommentaire(): ?string
     {
@@ -45,15 +41,17 @@ class Avis
         return $this;
     }
 
-    public function getIdUtilisateur(): ?Connexion
+    public function getIdUserAvis(): ?User
     {
-        return $this->idUtilisateur;
+        return $this->idUserAvis;
     }
 
-    public function setIdUtilisateur(?Connexion $idUtilisateur): self
+    public function setIdUserAvis(?User $idUserAvis): self
     {
-        $this->idUtilisateur = $idUtilisateur;
+        $this->idUserAvis = $idUserAvis;
 
         return $this;
     }
+
+
 }
