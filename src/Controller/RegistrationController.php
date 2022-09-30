@@ -20,7 +20,7 @@ class RegistrationController extends AbstractController
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid() ) {
             // encode the plain password
             $user->setPassword(
             $userPasswordHasher->hashPassword(
@@ -29,11 +29,9 @@ class RegistrationController extends AbstractController
                 )
             );
 
-            $entityManager->persist($user);
             $entityManager->flush();
             // do anything else you need here, like send an email
 
-            return $this->redirectToRoute('app_site');
         }
 
         return $this->render('registration/register.html.twig', [
