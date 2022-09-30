@@ -25,7 +25,12 @@ class Prestations
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $description;
+    private $image;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $prix;
 
     public function getId(): ?int
     {
@@ -44,14 +49,26 @@ class Prestations
         return $this;
     }
 
-    public function getdescription(): ?string
+    public function getimage(): ?string
     {
-        return $this->description;
+        return $this->image;
     }
 
-    public function setdescription(string $description): self
+    public function setimage(string $image): self
     {
-        $this->description = $description;
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getPrix(): ?int
+    {
+        return $this->prix;
+    }
+
+    public function setPrix(int $prix): self
+    {
+        $this->prix = $prix;
 
         return $this;
     }
