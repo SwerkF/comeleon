@@ -5,11 +5,26 @@
 {% block body %}
 
 
-<div class="container glass-bg">
-    <h2> Gestion des Prestations </h2>
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
+<div class="container glass-bg mb-5 pt-5 pb-5" style="margin-top:80px">
+    <h2 style="font-weight:700"> Ajouter une préstation </h2>
+     {{ form_start(form) }}
+    <div data-aos="fade-up">
+        <span style="font-size: 20px; font-weight:600; color:black">Libelle</span><br>
+        {{ form_widget(form.libelle, { 'attr' : { 'class': 'form-control' } } ) }}
+    </div>
+    <br>
+    <div data-aos="fade-up">
+        <span style="font-size: 20px; font-weight:600; color:black">Image</span><br>
+        {{ form_widget(form.image, { 'attr' : { 'class': 'form-control' } }) }}
+    </div>
+    <br>
+    <div data-aos="fade-up">
+        <span style="font-size: 20px; font-weight:600; color:black">Prix (en €)</span><br>
+        {{ form_widget(form.prix, { 'attr' : { 'class': 'form-control' } } ) }}
+    </div> 
+    <br>
     {{ form_end(form) }}
+    
 </div>
-
+<div style="margin-bottom: 10%"> </div>
 {% endblock %}
