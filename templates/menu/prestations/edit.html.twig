@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion{% endblock %}
+
+{% block body %}
+
+
+<div class="container glass-bg">
+    <h2> Gestion des Prestations </h2>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+</div>
+
+{% endblock %}
