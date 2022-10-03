@@ -16,7 +16,7 @@
                 
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+        {% endblock %}  
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
@@ -138,14 +138,14 @@ html {
     </button>
     <divs class="collapse navbar-collapse justify-content-end" id="navbarColor01">
     <ul class="navbar-nav">
-        <li data-aos="fade-up" data-aos-delay="100" class="nav-item">
-            <a class="nav-link active" href="{{ path('app_site') }}"><i class="fa-solid fa-house"></i> Home</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="/site">Home</a>
         </li>
-        <li data-aos="fade-up" data-aos-delay="200" class="nav-item">
-            <a class="nav-link active" href=""><i class="fa-solid fa-at"></i> About</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="/about">About</a>
         </li>
-        <li data-aos="fade-up" data-aos-delay="300" class="nav-item">
-            <a class="nav-link active" href=""><i class="fa-solid fa-screwdriver-wrench"></i> Prestation</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="/prestation">Prestation</a>
         </li>
          <li data-aos="fade-up" data-aos-delay="400" class="nav-item">
             <a class="nav-link active" href=""><i class="fa-solid fa-star"></i> Avis</a>
@@ -166,7 +166,7 @@ html {
             </li>
         {% else %}
             <li data-aos="fade-up" data-aos-delay="700" class="nav-item">
-                <a class="nav-link active" href="{{ path('app_login') }}"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</a>
+                <a class="nav-link active"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</a>
             </li>
         {% endif %}
        
