@@ -4,39 +4,31 @@
 {% block body %}
 
 
-<div class="container pb-5 pt-5" style="margin-top:80px">
+<div class="container pb-5 pt-5 glass-bg" style="margin-top:100px">
   <div class="row align-items-center justify-content-center justify-content-around">
-    <div class="col">
+    <div class="col"  style="margin-left: 3vw">
       <h1 style="font-size:50px" class="pt-5">
       <strong>PAGE D'AVIS</strong></h1>
-      <p>_______________________</p>
-      <p>Veuillez trouver les avis laissés par les clients sur le site</p>
+      <p class="text-primary" style="font-weight:500">Veuillez trouver les avis laissés par les clients sur le site</p>
       <button type="button" class="btn btn-primary">Voir les avis</button>
     </div>
-    <div class="col">
-      <img style="width:150px" src="assets/coche.png"> <!-- Changer lien de l'image -->
+    <div class="col text-center">
+      <img style="width:250px;" src="assets/coche.png"> <!-- Changer lien de l'image -->
     </div>
-    </br >
-    </br >
   </div>
 </div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFC21B" fill-opacity="1" d="M0,0L80,48C160,96,320,192,480,197.3C640,203,800,117,960,101.3C1120,85,1280,139,1360,165.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-
+<br>
+<svg xmlns="http://www.w3.org/2000/svg" style="margin-top:200px" viewBox="0 0 1440 320"><path fill="#FFC21B" fill-opacity="1" d="M0,0L80,48C160,96,320,192,480,197.3C640,203,800,117,960,101.3C1120,85,1280,139,1360,165.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
 <div style="background-color:#FFC21B">
   <div class="container">
     <h1 ><center>Liste de nos avis</center></h1></br> 
       <div style="display:grid; grid-template-columns: 50% 50%; grid-gap: 20px">
       {% for avis in avis %}
         
-            <div class="col " style="background-color:#dfaa00; border: 1px solid black; border-radius: 22px; padding: 10px  ">
-            
-              <h3 class="text-decoration" style="font-weight: 600;  ">
-                {{avis.nom}}
-                {{avis.prenom}}</h3></br >
-                <p style="font-size: 26px; color: #000">{{avis.commentaire}}</p>
-            </div>
-            
-      
+            <div class="col " style="background-color:#ebb113; border-radius: 22px  ">            
+              <h3 class="text-decoration" style="font-weight: 600;  background-color:#e6a802; border-radius: 22px 22px 0px 0px;  padding: 10px ">{{avis.nom}} {{avis.prenom}}</h3>
+                <p style="font-size: 22px; color: #000; padding-left:10px">"{{avis.commentaire}}"</p>
+            </div>          
       {% endfor %}
       </div>
 
