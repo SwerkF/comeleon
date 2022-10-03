@@ -1,19 +1,91 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SiteController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
 
-<div class="container">
-  <div class="row">
+<div data-aos="fade-up" class="container pb-5 pt-5 glass-bg" style="margin-top:100px">
+  <div class="row align-items-center justify-content-center justify-content-around">
     <div class="col">
-      <img style="margin-top: 100px;  width:500px" src="assets/ampoule.png">
+      <img data-aos="fade-up" class="ampoule" style="margin-top: 100px; width:250px" src="assets/ampoule.png">
     </div>
-    <div class="col" style="height:500px">
-      <h1 style="margin-top: 300px; font-size:50px "> <strong>AVEC NOUS, C'EST LE COUP DE FOUDRE ASSURE!</strong></h1>
-      <p>_____________________________</p>
-      <p>Bienvenue sur le site de 3Cables</p>
-      <button type="button" class="btn btn-primary">Découvrir</button>
+    <div id="title" data-aos="fade-up" class="col pt-5">
+      <h1  data-aos="fade-up" data-aos-delay="200" style="font-size:50px" class="title pt-5">
+      <strong></strong></h1>
+      <p data-aos="fade-up" data-aos-delay="300" class="text-primary" style="font-weight:500">Bienvenue sur le site de 3Cables</p>
+      <a href="#presentation" data-aos="fade-up" data-aos-delay="400" type="button" class="btn btn-primary">Découvrir  &nbsp;<i class="fa-solid fa-arrow-right"></i></i></a>
+    </div>
+      <img data-aos="fade-up-left" class="ampoule spark1" style="margin-top: 100px; width:250px; text-align:center" src="assets/spark1.png">
+      <img data-aos="fade-up-right" class="ampoule spark2" style="margin-top: 100px; width:250px; text-align:center" src="assets/spark2.png">
+  </div>
+</div>
+
+
+<br>
+<br>
+<svg class="pt-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fc0404" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,213.3C480,224,600,224,720,186.7C840,149,960,75,1080,53.3C1200,32,1320,64,1380,80L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+<div id="presentation" class="color-red-bg pt-5 pb-5" style="background-color:#fc0404; ">
+  <div class="container" style="padding-bottom: 150px; padding-top: 100px">
+    <div class="row align-items-center justify-content-center justify-content-around" style="padding-top:80px; padding-bottom: 80px">
+      <div class="col" data-aos="fade-right" >
+        <h2 style="color:white; font-size:32px"> <strong>Qui suis-je?</strong></h2>
+        <p style="color:white;font-size:22px; font-weight:450">
+          Mon nom est Monsieur <strong>A. GALISSARD</strong>, je suis un éléctriciens et gérant de l'entreprise <strong>3Cables</strong>. 
+          Avec plus de <strong>15 ans d'expérience</strong>, je suis le professionnel qu'il vous faut pour alimenter vos locaux.
+          <br>Si vous souhaitez en savoir plus sur moi ou sur mon entreprise, rendez vous sur la page <strong>About</strong>.
+        </p>
+        <button type="button" class="btn btn-secondary">En savoir plus &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="col" data-aos="fade-left">
+        <img class="imgs" style=" width:250px" src="assets/accueil_1.png">
+      </div>
     </div>
   </div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fc0404" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,213.3C480,224,600,224,720,186.7C840,149,960,75,1080,53.3C1200,32,1320,64,1380,80L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#049cfc" fill-opacity="1" d="M0,160L80,149.3C160,139,320,117,480,133.3C640,149,800,203,960,197.3C1120,192,1280,128,1360,96L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+<div class="color-red-bg pt-5 pb-5" style="background-color:#049cfc">
+  <div class="container" style="padding-bottom: 150px; padding-top: 100px">
+    <div class="row align-items-center justify-content-center justify-content-around" style="padding-top:80px; padding-bottom: 80px">
+      <div class="col" data-aos="fade-up">
+        <img class="imgs"  style=" width:250px" src="assets/accueil_2.png">
+      </div>
+      <div class="col" data-aos="fade-down">
+        <h2 style="font-size:32px"> <strong>Préstations</strong></h2>
+        <p style="color:black;font-size:22px; font-weight:450">
+          3Cables couvre un grand nombre de prestations à prix différents selon la surface à travailler. 3Cables pratique aussi la rénnovation ainsi que la mise en place de système éléctrique.
+          <br>Si vous souhaitez voir les prestations proposées, rendez-vous sur la page "Prestations".
+        </p>
+        <button type="button" class="btn btn-primary">Prestations &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#049cfc" fill-opacity="1" d="M0,160L80,149.3C160,139,320,117,480,133.3C640,149,800,203,960,197.3C1120,192,1280,128,1360,96L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fcec04" fill-opacity="1" d="M0,64L80,90.7C160,117,320,171,480,170.7C640,171,800,117,960,96C1120,75,1280,85,1360,90.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+<div class="color-red-bg pt-5 pb-5" style="background-color:#fcec04">
+  <div class="container" style="padding-bottom: 150px; padding-top: 100px">
+    <div class="row align-items-center justify-content-center justify-content-around" style="padding-top:80px; padding-bottom: 80px">
+      <div class="col" data-aos="zoom-out">
+        <h2 style="font-size:32px"> <strong>Toujours pas convaincu?</strong></h2>
+        <p style="color:black;font-size:22px; font-weight:450">
+        Si vous n'êtes toujours pas convaincu par les prestations proposées par 3Cables, vous pouvez toujours me contacter pour plus d'informations à propos de celle-ci ou consulter la page avis afin de lire les avis qu'ont déposé les clients.
+        Rendez-vous sur la page "Avis" ou "Contact" pour en savoir plus.
+        </p>
+        <button type="button" class="btn btn-primary">Avis &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+        <button type="button" class="btn btn-primary">Contact &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="col" data-aos="zoom-in">
+        <img class="imgs" style=" width:250px" src="assets/accueil_3.png">
+      </div>
+    </div>
+  </div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fcec04" fill-opacity="1" d="M0,64L80,90.7C160,117,320,171,480,170.7C640,171,800,117,960,96C1120,75,1280,85,1360,90.7L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+<div class="container" style="padding-bottom: 150px; padding-top: 100px">
+  <div class="row align-items-center justify-content-center justify-content-around" style="padding-top:80px; padding-bottom: 80px">
+    <h2>Contactez nous</h2>
+  </div>
+</div>
+<script type="text/javascript">window.onload = function(){ type() }</script>
 {% endblock %}

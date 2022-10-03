@@ -1,25 +1,23 @@
-
 <?php
 
+namespace App\Controller;
 
-use App\Entity\Prestation;
+use App\Entity\Prestations;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PrestationController extends AbstractController
-{/**
-     * @Route("/prestation", name="app_site")
+{
+    /**
+     * @Route("/prestation", name="app_prestation")
      */
-    public function getPrestation(): Response
-    {
-        $repo=$this->getDoctrine()->getRepository(Prestations::Class);
-
-
-        $prestation=$repo->findAll();
-        return $this->render('site/index.html.twig', [
-            'controller_name' => 'SiteController',
-            'name'=>'SiteController',
-            'prestation'=>$prestation
+    public function index(): Response
+    {  
+        $prestations = $this->getDoctrine()->getRepository(Prestations::class)->findAll();
+        return $this->render('prestation/index.html.twig', [
+            'controller_name' => '',
+            'prestations' => $prestations,
         ]);
-    }}
+    }
+}
