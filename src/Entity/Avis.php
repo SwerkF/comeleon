@@ -23,10 +23,19 @@ class Avis
     private $commentaire;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prenom;
+
+    /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="avis")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $idUserAvis;
 
 
     public function getCommentaire(): ?string
@@ -41,17 +50,28 @@ class Avis
         return $this;
     }
 
-    public function getIdUserAvis(): ?User
+    public function getNom(): ?string
     {
-        return $this->idUserAvis;
+        return $this->nom;
     }
 
-    public function setIdUserAvis(?User $idUserAvis): self
+    public function setNom(string $nom): self
     {
-        $this->idUserAvis = $idUserAvis;
+        $this->nom = $nom;
 
         return $this;
     }
 
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): self
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
 
 }
