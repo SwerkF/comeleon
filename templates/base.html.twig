@@ -27,13 +27,17 @@
 html {
   scroll-behavior: smooth;
 }
+
     * {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Montserrat', sans-serif; 
     }
     
+
     body {
-        background: url("../../../assets/back.jpg") repeat scroll 0
+        background: url("../../../assets/back.jpg") repeat scroll 0;
     }
+
+
     .glass-bg {
     background: rgba(255, 255, 255, 0.10);
     border-radius: 16px;
@@ -128,6 +132,8 @@ html {
     flex-direction:row;
     align-items: center;
     }
+
+
 </style>
 
  <nav data-aos="fade-down"  class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -138,20 +144,20 @@ html {
     </button>
     <divs class="collapse navbar-collapse justify-content-end" id="navbarColor01">
     <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link active" href="/site">Home</a>
+        <li data-aos="fade-up" data-aos-delay="100" class="nav-item">
+            <a class="nav-link active" href="/site"><i class="fa-solid fa-house"></i> Home</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="/about">About</a>
+        <li data-aos="fade-up" data-aos-delay="200" class="nav-item">
+            <a class="nav-link active" href="/about"><i class="fa-solid fa-id-card"></i> About</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="/prestation">Prestation</a>
+        <li data-aos="fade-up" data-aos-delay="300" class="nav-item">
+            <a class="nav-link active" href="/prestation"><i class="fa-solid fa-money-check-dollar"></i> Prestation</a>
         </li>
          <li data-aos="fade-up" data-aos-delay="400" class="nav-item">
-            <a class="nav-link active" href=""><i class="fa-solid fa-star"></i> Avis</a>
+            <a class="nav-link active" href="/avis"><i class="fa-solid fa-star"></i> Avis</a>
         </li>
         <li data-aos="fade-up" data-aos-delay="500" class="nav-item">
-            <a class="nav-link active" href=""><i class="fa-solid fa-phone"></i> Contact</a>
+            <a class="nav-link active" href="/contact"><i class="fa-solid fa-phone"></i> Contact</a>
         </li>
         <li data-aos="fade-up" data-aos-delay="600" class="nav-item">
             <a class="nav-link active">|</a>
@@ -166,7 +172,11 @@ html {
             </li>
         {% else %}
             <li data-aos="fade-up" data-aos-delay="700" class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link active" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</a>
+=======
+                <a class="nav-link active" href="{{ path('app_login') }}"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</a>
+>>>>>>> feature
             </li>
         {% endif %}
        

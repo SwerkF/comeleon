@@ -20,6 +20,11 @@ class Avis
     /**
      * @ORM\Column(type="string", length=255)
      */
+    private $commentaire;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $nom;
 
     /**
@@ -28,13 +33,21 @@ class Avis
     private $prenom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="avis")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $commentaire;
 
-    public function getId(): ?int
+
+    public function getCommentaire(): ?string
     {
-        return $this->id;
+        return $this->commentaire;
+    }
+
+    public function setCommentaire(string $commentaire): self
+    {
+        $this->commentaire = $commentaire;
+
+        return $this;
     }
 
     public function getNom(): ?string
@@ -61,15 +74,4 @@ class Avis
         return $this;
     }
 
-    public function getCommentaire(): ?string
-    {
-        return $this->commentaire;
-    }
-
-    public function setCommentaire(string $commentaire): self
-    {
-        $this->commentaire = $commentaire;
-
-        return $this;
-    }
 }

@@ -5,6 +5,7 @@ use App\Entity\Avis;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class AvisController extends AbstractController
 {
@@ -21,4 +22,17 @@ class AvisController extends AbstractController
             'avis'=>$avis
         ]);
     }
+    /**
+     * @Route("/create_avis", name="app_avis")
+     */
+     /*
+    public function createNewAvis()
+    {
+       $avis=new Avis();
+       $avis->setNom('');
+       $avis->setPrenom('');
+       $avis->setCommentaire('');
+    */
 }
+    
+
