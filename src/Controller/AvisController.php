@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 use App\Entity\Avis;
-use App\Entity\User;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,14 +14,14 @@ class AvisController extends AbstractController
     /**
      * @Route("/avis", name="app_avis")
      */
-    public function index(): Response
+    public function index(Request $request): Response
     {
-
+        $avis = new Avis();
         $repo = $this->getDoctrine()->getRepository(Avis::class);
-    $avis=$repo->findAll();
-    $avis = new Avis();
-
-        $form = $this->createFormBuilder($avis)
+        $avis=$repo->findAll();
+    
+        $avis2 = new Avis();
+        $form = $this->createFormBuilder($avis2)
         ->add('nom',TextType::class)
         ->add('prenom',TextType::class)
         ->add("commentaire",TextType::class)
@@ -35,16 +34,17 @@ class AvisController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $avis = $form->getData();
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($avis);
+            $entityManager->persist($avis2);
             $entityManager->flush();
-            return $this->redirect('app_avis');
+           
+        return $this->render('avis/index.html.twig');
 
            
         }
         return $this->render('avis/index.html.twig', [
             'controller_name' => 'AvisController',
             'avis' => $avis,
-            'form'=>$form
+            'form'=>$form->createView()
         ]);
     }
     /**
