@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Avis;
+use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -37,6 +38,14 @@ class AvisRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    public function getAllAvis() {
+        return $this->getEntityManager()
+        ->createQuery(
+            'SELECT commentaire, nom, prenom FROM App:avis INNER JOIN App:user WHERE user.id = id_user_avis_id'
+        )
+        ->getResult();
     }
 
 //    /**

@@ -25,7 +25,7 @@ class Presentation
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $activites;
+    private $description;
 
     public function getId(): ?int
     {
@@ -44,14 +44,14 @@ class Presentation
         return $this;
     }
 
-    public function getActivites(): ?string
+    public function getdescription(): ?string
     {
-        return $this->activites;
+        return $this->description;
     }
 
-    public function setActivites(string $activites): self
+    public function setdescription(string $description): self
     {
-        $this->activites = $activites;
+        $this->description = $description;
 
         return $this;
     }
