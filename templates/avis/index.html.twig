@@ -37,18 +37,9 @@
  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFC21B" fill-opacity="1" d="M0,0L80,48C160,96,320,192,480,197.3C640,203,800,117,960,101.3C1120,85,1280,139,1360,165.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
 <h1 class="text-decoration-underline text-warning" class="text-warning"><center>Bienvenue sur notre page d'avis</center></h1></br>
 <form method="POST" >
-    <table class="table table-striped">   
-    <tr>
-    <td><center><input type="text" id="loginUser" size="32"  placeholder="Votre nom" name="login" required></center></td>
-    <td><center><input type="text" id="fisrtnameUser" size="32"  placeholder=" Votre prénom" name="firstname" required></center></td></tr>
-    <tr>
-    <td><center><input type="text"  size="72"  placeholder="Votre avis"  required></center></td>
-    <td><center><button type="submit" class="btn">Enregistrer</button></center></td>
-   
-            </table></br>
-            
-      
-            </form>
+{{form_start(form)}}
+{{form_widget(form)}}
+{{form_end(form)}}  </form>
 </div>
   </div>
 </div>
