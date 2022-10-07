@@ -39,22 +39,26 @@ class ContactController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $avis = $form->getData();
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($avis2);
+            $entityManager->persist($contact2);
             $entityManager->flush();
-           
-        return $this->render('contact/index.html.twig');
 
+            $contact3 = new Contact();
+            $repo = $this->getDoctrine()->getRepository(Contact::class);
+            $contact3=$repo->findAll();
+            return $this->render('contact/index.html.twig', [
+                'controller_name' => 'ContactController',
+                'contact2' => $contact3,
+                'form'=>$form->createView()
+            ]);
+        
            
         }
+        
+       
         return $this->render('contact/index.html.twig', [
             'controller_name' => 'ContactController',
-            'contact' => $contact,
+            'contact2'=>$contact,
             'form'=>$form->createView()
-        ]);
-        $contact = $this->getDoctrine()->getRepository(Contact::class)->findAll();
-        return $this->render('contact/index.html.twig', [
-            'controller_name' => 'ContactController',
-            'contact'=>$contact
         ]);
     }
     

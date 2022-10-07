@@ -36,20 +36,38 @@ class AvisController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($avis2);
             $entityManager->flush();
+
+            $avis3 = new Avis();
+        $repo = $this->getDoctrine()->getRepository(Avis::class);
+        $avis3=$repo->findAll();
            
-        return $this->render('avis/index.html.twig');
+            return $this->render('avis/index.html.twig', [
+                'controller_name' => 'AvisController',
+                'avis2' => $avis3,
+                'form'=>$form->createView()
+            ]);
 
            
         }
         return $this->render('avis/index.html.twig', [
             'controller_name' => 'AvisController',
-            'avis' => $avis,
+            'avis2' => $avis,
             'form'=>$form->createView()
         ]);
-    }
+    }  
     /**
-     * @Route("/create_avis", name="app_avis_create")
+     * @Route("/avis/delete/{id}")
+     * Method({"DELETE"})
      */
+    public function delete(Request $request,$id) {
+        $avis = $this->getDoctrine()->getRepository(Avis::class)->find($id);
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($avis);
+        $entityManager->flush();
+
+        $response = new Response();
+        $response->send();
+    }  
     
    
 

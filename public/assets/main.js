@@ -29,4 +29,19 @@ if(prestations){
         }
     });
 }
+const avis = document.getElementById('avis');
+console.log(avis);
 
+if(avis){
+    avis.addEventListener('click', (e) => {
+        if(e.target.className === 'btn btn-danger delete_avis'){
+            if(confirm('Voulez vous supprimer cet avis?')){
+                const id = e.target.getAttribute('data-id');
+    
+                fetch(`/avis/delete/${id}`, {
+                    method: 'DELETE'
+                }).then(res => window.location.reload());
+            }
+        }
+    });
+}

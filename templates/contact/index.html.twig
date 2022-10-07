@@ -3,7 +3,7 @@
 {% block title %}Hello ContactController!{% endblock %}
 
 {% block body %}
-<<div class="container pb-5 pt-5 glass-bg" style="margin-top:100px">
+<div class="container pb-5 pt-5 glass-bg" style="margin-top:100px">
   <div class="row align-items-center justify-content-center justify-content-around">
     <div class="col"  style="margin-left: 3vw">
       <h1 style="font-size:50px" class="pt-5">
@@ -25,7 +25,36 @@
 </br>
      
    {{form_start(form)}}</br>
-{{form_widget(form)}}</br>
+
+<div class="form-group">
+<label for="">Nom:</label>
+{{form_widget(form.nom)}}
+</div></br>
+<div class="form-group">
+<label for="">Prénom:</label>
+{{form_widget(form.prenom)}}
+</div></br>
+<div class="form-group">
+<label for="">Adresse Email:</label>
+{{form_widget(form.email)}}
+</div></br>
+<div class="form-group">
+<label for="">Numéro de téléphone:</label>
+{{form_widget(form.telephone)}}
+</div></br>
+<div class="form-group">
+<label for="">Adresse:</label>
+{{form_widget(form.adresse)}}
+</div></br>
+<div class="form-group">
+<label for="">Sujet:</label>
+{{form_widget(form.sujet)}}
+</div></br>
+<div class="form-group">
+<label for="">Message:</label>
+{{form_widget(form.message)}}
+</div></br>
+
 {{form_end(form)}}
     
     </div>
