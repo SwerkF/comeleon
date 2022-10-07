@@ -34,7 +34,7 @@ html {
     
 
     body {
-        background: url("../../../assets/back.jpg") repeat scroll 0;
+        background: url("../../../assets/back.jpg") no-repeat fixed 0;
     }
 
 
@@ -172,11 +172,7 @@ html {
             </li>
         {% else %}
             <li data-aos="fade-up" data-aos-delay="700" class="nav-item">
-<<<<<<< HEAD
-                <a class="nav-link active" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</a>
-=======
                 <a class="nav-link active" href="{{ path('app_login') }}"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</a>
->>>>>>> feature
             </li>
         {% endif %}
        
