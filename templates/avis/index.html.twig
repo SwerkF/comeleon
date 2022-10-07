@@ -22,11 +22,19 @@
 <div style="background-color:#FFC21B">
   <div class="container">
     <h1 ><center>Liste de nos avis</center></h1></br> 
-      <div style="display:grid; grid-template-columns: 50% 50%; grid-gap: 20px">
-      {% for avis in avis %}
+      <div style="display:grid; grid-template-columns: 50% 50%; grid-gap: 20px" id="avis">
+      {% for avis in avis2 %}
         
-            <div class="col " style="background-color:#ebb113; border-radius: 22px  ">            
-              <h3 class="text-decoration" style="font-weight: 600;  background-color:#e6a802; border-radius: 22px 22px 0px 0px;  padding: 10px ">{{avis.nom}} {{avis.prenom}}</h3>
+            <div class="col " style="background-color:#ebb113; border-radius: 22px  ">
+            {% if app.user %} 
+              {% if app.user.email =="maildefou123@gmail.com" %}  
+              <a href="" data-id="{{avis.id}}" class="btn btn-danger delete_avis">Supprimer</a>
+            
+              {% endif %}
+            {% endif %}         
+              <h3 class="text-decoration" style="font-weight: 600;  background-color:#e6a802; border-radius: 22px 22px 0px 0px;  padding: 10px ">
+              {{avis.nom}}
+               {{avis.prenom}}</h3>
                 <p style="font-size: 22px; color: #000; padding-left:10px">"{{avis.commentaire}}"</p>
             </div>          
       {% endfor %}
@@ -35,10 +43,24 @@
   </div>
 </div>
  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFC21B" fill-opacity="1" d="M0,0L80,48C160,96,320,192,480,197.3C640,203,800,117,960,101.3C1120,85,1280,139,1360,165.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-<h1 class="text-decoration-underline text-warning" class="text-warning"><center>Bienvenue sur notre page d'avis</center></h1></br>
-<form method="POST" >
+<h1 class="text-decoration-underline black; color:black"><center>Bienvenue sur notre page d'avis</center></h1></br>
+<form method="POST" style="font-weight:550; color:#000 ">
+
 {{form_start(form)}}
-{{form_widget(form)}}
+
+<div class="form-group">
+<label for="">Nom :</label>
+{{form_widget(form.nom, { 'attr' : { 'class': 'form-control' } })}}
+</div></br>
+<div class="form-group">
+<label for="">Prénom :</label>
+{{form_widget(form.prenom, { 'attr' : { 'class': 'form-control' } })}}
+</div></br>
+<div class="form-group">
+<label for="">Avis :</label>
+{{form_widget(form.commentaire,  { 'attr' : { 'class': 'form-control' }})}}
+</div></br>
+
 {{form_end(form)}}  </form>
 </div>
   </div>

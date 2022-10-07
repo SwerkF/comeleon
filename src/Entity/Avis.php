@@ -31,11 +31,9 @@ class Avis
      * @ORM\Column(type="string", length=255)
      */
     private $prenom;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="avis")
-     * @ORM\JoinColumn(nullable=false)
-     */
+    public function getId(){
+        return $this->id;
+    }
 
 
     public function getCommentaire(): ?string
