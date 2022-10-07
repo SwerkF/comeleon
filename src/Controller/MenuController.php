@@ -83,9 +83,10 @@ class MenuController extends AbstractController
         ->add("libelle", TextType::class)
         ->add('image', ChoiceType::class, [
             'choices'  => [
-                'Fibre' => "1",
-                'Prise' => "2",
-                'Electrique' => "3",
+                'Cable aerien' => "fibre_aerien.png",
+                'Cable souterrain' => "fibre_soute.jpg",
+                'Prise rond' => "prise_telephone.png",
+                'Prise electrique' => "prise.png",
             ],
         ])
         ->add('prix', TextType::class)
@@ -124,9 +125,10 @@ class MenuController extends AbstractController
         ->add("libelle", TextType::class)
         ->add('image', ChoiceType::class, [
             'choices'  => [
-                'Fibre' => "1",
-                'Prise' => "2",
-                'Electrique' => "3",
+                'Cable aerien' => "fibre_aerien.png",
+                'Cable souterrain' => "fibre_soute.jpg",
+                'Prise rond' => "prise_telephone.png",
+                'Prise electrique' => "prise.png",
             ],
         ])
         ->add('prix', TextType::class)
