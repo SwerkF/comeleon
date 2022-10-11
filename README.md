@@ -8,7 +8,9 @@
 ![Logo](https://cdn.discordapp.com/attachments/365974442939252736/1020388759537205309/unknown.png)
 
 ## Présentation 🎉
-3cables est l'entreprise de Monsieur A. GALISSARD. Celui-ci à contacté Colemeon afin de créer un site pour son entreprise de plomberie nommé "3cables".
+3cables est l'entreprise de Monsieur A. GALISSARD. Il nous a contacté Colemeon afin de créer un site pour son entreprise afin qu'il puisse exposer ses préstations et faire un coup de pub pour son entreprise.
+L'entreprise se base autour du métier d'éléctricien et tout ce qui y touche comme la fibre par exemple. 
+Nous sommes très investi dans le travail avec nos collaborateurs afin de proposer à Monisuer Galissard, le meilleur site possible.
 
 ## Description 📝
 
@@ -25,9 +27,9 @@ Le site est géré par les élements suivants :
 Ce projet sera à rendre au plus tard le 12/08/2022 à 20h au client. 
 ## Auteurs 😎
 [![GitHub watchers](https://badgen.net/github/watchers/SwerkF/colemeon)](https://GitHub.com/Naereen/StrapDown.js/watchers/)
-- [@duchenec-coder](https://github.com/duchenec-coder)
-- [@thomasl28500](https://github.com/thomasl28500)
-- [@Swerk](https://github.com/SwerkF)
+- [@duchenec-coder](https://github.com/duchenec-coder) Clément
+- [@thomasl28500](https://github.com/thomasl28500) Thomas
+- [@Swerk](https://github.com/SwerkF) Oliwer
 
 
 ## Features 🧠
@@ -42,7 +44,9 @@ Ce projet sera à rendre au plus tard le 12/08/2022 à 20h au client.
 
 ## En local 💾
 
-Installer symfony with scoop
+Installer composer [ici !](https://getcomposer.org/download/)
+
+Installer symfony avec scoop
 
 ```bash
   scoop install symfony-cli
@@ -52,6 +56,12 @@ Cloner le projet
 
 ```bash
   git clone https://github.com/SwerkF/colemeon
+```
+
+Installer les outils nécessaire pour composer
+
+```bash
+composer install
 ```
 
 Lancer le serveur
