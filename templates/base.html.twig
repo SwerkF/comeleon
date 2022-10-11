@@ -34,7 +34,7 @@ html {
     
 
     body {
-        background: url("../../../assets/back.jpg") repeat scroll 0;
+        background: url("../../../assets/back.jpg") no-repeat fixed 0;
     }
 
 
@@ -145,19 +145,19 @@ html {
     <divs class="collapse navbar-collapse justify-content-end" id="navbarColor01">
     <ul class="navbar-nav">
         <li data-aos="fade-up" data-aos-delay="100" class="nav-item">
-            <a class="nav-link active" href="/site"><i class="fa-solid fa-house"></i> Home</a>
+            <a class="nav-link active" href="{{ path('app_site') }}"><i class="fa-solid fa-house"></i> Home</a>
         </li>
         <li data-aos="fade-up" data-aos-delay="200" class="nav-item">
-            <a class="nav-link active" href="/about"><i class="fa-solid fa-id-card"></i> About</a>
+            <a class="nav-link active" href="{{ path('app_about') }}"><i class="fa-solid fa-id-card"></i> About</a>
         </li>
         <li data-aos="fade-up" data-aos-delay="300" class="nav-item">
-            <a class="nav-link active" href="/prestation"><i class="fa-solid fa-money-check-dollar"></i> Prestation</a>
+            <a class="nav-link active" href="{{ path('app_prestation') }}"><i class="fa-solid fa-money-check-dollar"></i> Prestation</a>
         </li>
          <li data-aos="fade-up" data-aos-delay="400" class="nav-item">
-            <a class="nav-link active" href="/avis"><i class="fa-solid fa-star"></i> Avis</a>
+            <a class="nav-link active" href="{{ path('app_avis') }}"><i class="fa-solid fa-star"></i> Avis</a>
         </li>
         <li data-aos="fade-up" data-aos-delay="500" class="nav-item">
-            <a class="nav-link active" href="/contact"><i class="fa-solid fa-phone"></i> Contact</a>
+            <a class="nav-link active" href="/{{ path('app_contact') }}"><i class="fa-solid fa-phone"></i> Contact</a>
         </li>
         <li data-aos="fade-up" data-aos-delay="600" class="nav-item">
             <a class="nav-link active">|</a>

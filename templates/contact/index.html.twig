@@ -3,42 +3,76 @@
 {% block title %}Hello ContactController!{% endblock %}
 
 {% block body %}
-<div class="container pb-5 pt-5" style="margin-top:80px">
-<div class="row align-items-center justify-content-center justify-content-around">
-    <div class="col">
+<div class="container pb-5 pt-5 glass-bg" style="margin-top:100px">
+  <div class="row align-items-center justify-content-center justify-content-around">
+    <div class="col"  style="margin-left: 3vw">
       <h1 style="font-size:50px" class="pt-5">
       <strong>PAGE DE CONTACT</strong></h1>
-      <p>_______________________</p>
-      <p>Si vous souhaitez en savoir plus, veuillez remplir ce formulaire</p>
-
+      <p class="text-primary" style="font-weight:500">Si vous souhaitez en savoir plus, veuillez compléter ce formulaire</p>
+      
     </div>
-    <div class="col">
-    <img style="width:200px" src="assets/R.jfif">
-    
-    </div></br>
-
+    <div class="col text-center">
+      <img style="width:250px;" src="assets/R.jfif"> <!-- Changer lien de l'image -->
+    </div>
+  </div>
+</div>
     </br>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFC855" fill-opacity="1" d="M0,0L80,48C160,96,320,192,480,197.3C640,203,800,117,960,101.3C1120,85,1280,139,1360,165.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+   <path fill="#FFC855" fill-opacity="1" d="M0,0L80,48C160,96,320,192,480,197.3C640,203,800,117,960,101.3C1120,85,1280,139,1360,165.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
   <div style="background-color:#FFC855">
    <div class="container">
-<h1 class="text-decoration-underline " class="text-warning"><center>Bienvenue sur notre page d'avis</center></h1></br>
-<form method="POST" ></br>
-    <table class="table table-striped">   
-    <tr>
-    <td><center><input type="text"  size="32"  placeholder="Votre nom" name="login" required></center></td>
-    <td><center><input type="text"  size="32"  placeholder=" Votre prénom" name="firstname" required></center></td></tr>
-    <tr>
-    <td><center><input type="text"  size="32"  placeholder="Votre adresse email" name="email" required></center></td>
-    <td><center><input type="text"  size="32"  placeholder="Votre numéro de téléphone" name="téléphone" required></center></td></tr>
-    <tr>
-    <td><center><input type="text"  size="32"  placeholder="Votre adresse" name="adresse" required></center></td>
-    <td><center><input type="text"  size="32"  placeholder=" Sujet de votre message" required></center></td></tr>
-    <tr>
-    <td><center><input type="text"  size="72"  placeholder="Votre message"  required></center></td>
-    <td><center><button type="submit" class="btn">Contacter</button></center></td>
+<h1 class="text-decoration-underline " class="text-warning"><center>Bienvenue sur notre page de contact</center></h1></br>
+</br>
+<form method="POST" style="font-weight:550; color:#000 ">
+  {{form_start(form)}}</br>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="">Nom:</label>
+        {{form_widget(form.nom, { 'attr' : { 'class': 'form-control' } })}}
+      </div></br>
+    </div>
+    <div class="col">
+    <div class="form-group">
+  <label for="">Prénom:</label>
+  {{form_widget(form.prenom,{ 'attr' : { 'class': 'form-control' } })}}
+  </div></br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+  <div class="form-group">
+  <label for="">Adresse Email:</label>
+  {{form_widget(form.email,{ 'attr' : { 'class': 'form-control' } })}}
+  </div></br>
+  </div>
+  <div class="col">
+  <div class="form-group">
+  <label for="">Numéro de téléphone:</label>
+  {{form_widget(form.telephone,{ 'attr' : { 'class': 'form-control' } })}}
+  </div></br>
+  </div>
+  </div>
+  <div class="form-group">
+  <label for="">Adresse:</label>
+  {{form_widget(form.adresse,{ 'attr' : { 'class': 'form-control' } })}}
+  </div></br>
+  <div class="form-group">
+  <label for="">Sujet:</label>
+  {{form_widget(form.sujet,{ 'attr' : { 'class': 'form-control' } })}}
+  </div></br>
+  <div class="form-group">
+  <label for="">Message:</label>
+  {{form_widget(form.message,{ 'attr' : { 'class': 'form-control' } })}}
+  </div></br>
+
+  {{form_end(form)}}
+      </div>
+  </div>
+</form>
+  
     
-    </table>
-    </div>
-    </div>
      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFC855" fill-opacity="1" d="M0,0L80,48C160,96,320,192,480,197.3C640,203,800,117,960,101.3C1120,85,1280,139,1360,165.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
 {% endblock %}
