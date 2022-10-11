@@ -3,7 +3,14 @@
 {% block title %}Gestion{% endblock %}
 
 {% block body %}
-
+{% if app.user.email != "admin@cable.fr" %}
+    <script>
+        function redirect() {
+            document.location.replace("{{ path('app_site') }}")
+        }
+        redirect();
+    </script>
+{% endif %}
 <div class="pb-5">
     <div id="prestations" class="container glass-bg pb-5" style="font-weight:500; color:#000; height: 100vh; margin-top: 100px; box-sizing: border-box">
         <h2 class="text-center mt-5" style="font-size:36px; font-weight:700">Gestion des prestations</h2>
