@@ -47,22 +47,19 @@
     
     <div class="row">
     </div>
-    {% if app.user.email == "maildefou123@gmail.com" %}
+    {% if app.user.email == "admin@cable.fr" %}
         <div class="prestation container">
             <h2 class="text-center">Gestion du site</h2>
             <p class="text-center" style="font-weight:500; color:#000">Vous pouvez modifier les informations du site ici.</p>
             <div class="text-center">
-                <a href="" class="btn btn-primary">Gestion des avis</a>
+                <a href="/avis" class="btn btn-primary">Gestion des avis</a>
                 <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer les avis.</p>
-                <a href="" class="btn btn-primary">Gestion des contacts</a>
-                <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer les contacts.</p>
-
                 <a href="{{ path('app_prestation_show') }}" class="btn btn-primary">Gestion des préstations</a>
                 <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer les préstations.</p>
-                <a href="/about/editP" class="btn btn-primary">Gestion de la présentation (PERSONNELLE)</a>
-                <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer la présentation personnelle.</p>
                 <a href="/about/editE" class="btn btn-primary">Gestion de la présentation (ETUDE)</a>
                 <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer les études.</p>
+                <a href="/about/editP" class="btn btn-primary">Gestion de la présentation (PERSONNELLE)</a>
+                <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer la présentation personnelle.</p>
             </div>
         </div>
     {% endif %}
