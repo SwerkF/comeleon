@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion{% endblock %}
+
+{% block body %}
+<style>
+    button {
+        background-color: #000;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 83%;
+    }
+
+</style>
+
+<div class="container glass-bg mb-5" style="margin-top:80px">
+    <h2 class="text-center mt-4">Gestion du compte</h2>
+    <p class="text-center" style="font-weight:500; color:#000">Vous pouvez modifier vos informations personnelles ici.</p>
+    {{ form_start(form) }}
+    <div class="row align-items-center justify-content-center justify-content-around mt-5">
+        <div data-aos="fade-up" class="col-4">
+            <span style="font-size: 20px; font-weight:600; color:black">Nom</span><br>
+            {{ form_widget(form.nom, { 'attr' : { 'class': 'form-control' } }) }}
+        </div>
+        <div data-aos="fade-up" class="col-4">
+            <span style="font-size: 20px; font-weight:600; color:black">Prenom</span><br>
+            {{ form_widget(form.prenom, { 'attr' : { 'class': 'form-control' } }) }}
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-center justify-content-around mt-3 ">
+        <div data-aos="fade-up" class="col-4">
+            <span style="font-size: 20px; font-weight:600; color:black">Email</span><br>
+            {{ form_widget(form.email, { 'attr' : { 'class': 'form-control' } }) }}
+        </div>
+        <div data-aos="fade-up" class="col-4">
+            <span style="font-size: 20px; font-weight:600; color:black">Mot de passe</span><br>
+            {{ form_widget(form.password, { 'attr' : { 'class': 'form-control' } }) }}
+        </div>
+    </div>
+    <div class="row align-items-center text-center mt-5">
+        {{ form_end(form) }}
+    </div>
+    <br>
+    
+    <div class="row">
+    </div>
+    {% if app.user.email == "maildefou123@gmail.com" %}
+        <div class="prestation container">
+            <h2 class="text-center">Gestion du site</h2>
+            <p class="text-center" style="font-weight:500; color:#000">Vous pouvez modifier les informations du site ici.</p>
+            <div class="text-center">
+                <a href="" class="btn btn-primary">Gestion des avis</a>
+                <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer les avis.</p>
+                <a href="" class="btn btn-primary">Gestion des contacts</a>
+                <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer les contacts.</p>
+
+                <a href="{{ path('app_prestation_show') }}" class="btn btn-primary">Gestion des préstations</a>
+                <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer les préstations.</p>
+                <a href="/about/editP" class="btn btn-primary">Gestion de la présentation (PERSONNELLE)</a>
+                <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer la présentation personnelle.</p>
+                <a href="/about/editE" class="btn btn-primary">Gestion de la présentation (ETUDE)</a>
+                <p class="text-center" style="font-weight:500; color:#000">Menu pour gérer les études.</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+
+<div style="height:80vh">
+    <div data-aos="fade-up" class="container glass-bg pb-5 pt-5" style="width:70%; margin-top: 4%">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">Inscription</h1>
+                {{ form_start(registrationForm) }}
+                
+                <div data-aos="fade-up">
+                    <span style="font-size: 20px; font-weight:600; color:black">Nom</span><br>
+                    {{ form_widget(registrationForm.nom, { 'attr' : { 'class': 'form-control' } }) }}
+                </div>
+                <div data-aos="fade-up">
+                    <span style="font-size: 20px; font-weight:600; color:black">Prenom</span><br>
+                    {{ form_widget(registrationForm.prenom, { 'attr' : { 'class': 'form-control' } }) }}
+                </div>
+                <div data-aos="fade-up">
+                    <span style="font-size: 20px; font-weight:600; color:black">Email</span><br>
+                    {{ form_widget(registrationForm.email, { 'attr' : { 'class': 'form-control' } }) }}   
+                </div>
+                <div data-aos="fade-up" style="font-size: 20px; font-weight:600; color:black">
+                    {{ form_widget(registrationForm.plainPassword, {
+                        label: 'Password',
+                        class: 'form-control'
+                    }) }} 
+                </div> <br>
+                
+            
+
+                <button  data-aos="fade-up" class="btn btn-lg btn-primary" style="width:100%;" type="submit">Valider </button>
+                {{ form_end(registrationForm) }}
+                
+            </div>
+            <div class="col">
+                <img data-aos="fade-up" class="" style="margin-left:auto; margin-right:auto; display:block; width:13vw" src="assets/rocket.png">
+            </div>
+        </div>
+    </div>
+</div>
+   
+{% endblock %}
