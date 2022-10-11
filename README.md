@@ -25,9 +25,9 @@ Le site est géré par les élements suivants :
 Ce projet sera à rendre au plus tard le 12/08/2022 à 20h au client. 
 ## Auteurs 😎
 [![GitHub watchers](https://badgen.net/github/watchers/SwerkF/colemeon)](https://GitHub.com/Naereen/StrapDown.js/watchers/)
-- [@duchenec-coder](https://github.com/duchenec-coder)
-- [@thomasl28500](https://github.com/thomasl28500)
-- [@Swerk](https://github.com/SwerkF)
+- [@duchenec-coder](https://github.com/duchenec-coder) Clément
+- [@thomasl28500](https://github.com/thomasl28500) Thomas
+- [@Swerk](https://github.com/SwerkF) Oliwer
 
 
 ## Features 🧠
@@ -42,7 +42,9 @@ Ce projet sera à rendre au plus tard le 12/08/2022 à 20h au client.
 
 ## En local 💾
 
-Installer symfony with scoop
+Installer composer [ici !](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+
+Installer symfony avec scoop
 
 ```bash
   scoop install symfony-cli
@@ -52,6 +54,12 @@ Cloner le projet
 
 ```bash
   git clone https://github.com/SwerkF/colemeon
+```
+
+Installer les outils nécessaire pour composer
+
+```bash
+composer install
 ```
 
 Lancer le serveur
