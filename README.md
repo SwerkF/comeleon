@@ -27,9 +27,9 @@ Le site est géré par les élements suivants :
 Ce projet sera à rendre au plus tard le 12/08/2022 à 20h au client. 
 ## Auteurs 😎
 [![GitHub watchers](https://badgen.net/github/watchers/SwerkF/colemeon)](https://GitHub.com/Naereen/StrapDown.js/watchers/)
-- [@duchenec-coder](https://github.com/duchenec-coder) Clément
-- [@thomasl28500](https://github.com/thomasl28500) Thomas
-- [@Swerk](https://github.com/SwerkF) Oliwer
+- [@duchenec-coder](https://github.com/duchenec-coder) Clément DUCHENE
+- [@thomasl28500](https://github.com/thomasl28500) Thomas LETELLIER
+- [@Swerk](https://github.com/SwerkF) Oliwer SKWERES
 
 
 ## Features 🧠
