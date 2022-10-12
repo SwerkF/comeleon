@@ -34,7 +34,7 @@
           Avec plus de <strong>15 ans d'expérience</strong>, je suis le professionnel qu'il vous faut pour alimenter vos locaux.
           <br>Si vous souhaitez en savoir plus sur moi ou sur mon entreprise, rendez vous sur la page <strong>About</strong>.
         </p>
-        <button type="button" class="btn btn-secondary">En savoir plus &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+        <button onclick="location.href =' {{ path('app_about') }}'" type="button" class="btn btn-secondary">En savoir plus &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
       </div>
       <div class="col" data-aos="fade-left">
         <img class="imgs" style=" width:250px" src="assets/accueil_1.png">
@@ -56,7 +56,7 @@
           3Cables couvre un grand nombre de prestations à prix différents selon la surface à travailler. 3Cables pratique aussi la rénnovation ainsi que la mise en place de système éléctrique.
           <br>Si vous souhaitez voir les prestations proposées, rendez-vous sur la page "Prestations".
         </p>
-        <button type="button" class="btn btn-primary">Prestations &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+        <button type="button" class="btn btn-primary" onclick="location.href =' {{ path('app_prestation') }}'">Prestations &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </div>
   </div>
@@ -72,8 +72,8 @@
         Si vous n'êtes toujours pas convaincu par les prestations proposées par 3Cables, vous pouvez toujours me contacter pour plus d'informations à propos de celle-ci ou consulter la page avis afin de lire les avis qu'ont déposé les clients.
         Rendez-vous sur la page "Avis" ou "Contact" pour en savoir plus.
         </p>
-        <button type="button" class="btn btn-primary">Avis &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
-        <button type="button" class="btn btn-primary">Contact &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+        <button type="button" class="btn btn-primary" onclick="location.href =' {{ path('app_avis') }}'">Avis &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+        <button type="button" class="btn btn-primary" onclick="location.href =' {{ path('app_contact') }}'">Contact &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
       </div>
       <div class="col" data-aos="zoom-in">
         <img class="imgs" style=" width:250px" src="assets/accueil_3.png">
@@ -82,10 +82,6 @@
   </div>
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fcec04" fill-opacity="1" d="M0,64L80,90.7C160,117,320,171,480,170.7C640,171,800,117,960,96C1120,75,1280,85,1360,90.7L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-<div class="container" style="padding-bottom: 150px; padding-top: 100px">
-  <div class="row align-items-center justify-content-center justify-content-around" style="padding-top:80px; padding-bottom: 80px">
-    <h2>Contactez nous</h2>
-  </div>
-</div>
+
 <script type="text/javascript">window.onload = function(){ type() }</script>
 {% endblock %}

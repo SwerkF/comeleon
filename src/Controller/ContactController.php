@@ -30,7 +30,7 @@ class ContactController extends AbstractController
         ->add('adresse',TextType::class)
         ->add('sujet',TextType::class)
         ->add("message",TextType::class)
-        ->add('save', SubmitType::class, array('label'=>'Ajouter',
+        ->add('save', SubmitType::class, array('label'=>'Envoyer',
         'attr'=>array('class'=>'btn')
            
         ))

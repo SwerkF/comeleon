@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion{% endblock %}
+
+{% block body %}
+{% if app.user.email != "admin@cable.fr" %}
+    <script>
+        function redirect() {
+            document.location.replace("{{ path('app_site') }}")
+        }
+        redirect();
+    </script>
+{% endif %}
+<div class="container glass-bg mb-5 pt-5 pb-5" style="margin-top:80px">
+    <h2 style="font-weight:700"> Modification de la presentation personnelle</h2>
+     {{ form_start(formP) }}
+    <div data-aos="fade-up">
+        <span style="font-size: 20px; font-weight:600; color:black">Titre</span><br>
+        {{ form_widget(formP.titre, { 'attr' : { 'class': 'form-control' } } ) }}
+    </div>
+    <br>
+    <div data-aos="fade-up">
+        <span style="font-size: 20px; font-weight:600; color:black">Description</span><br>
+        {{ form_widget(formP.description, { 'attr' : { 'class': 'form-control' } }) }}
+    </div>
+    <br>
+    {{ form_end(formP) }}
+    
+</div>
+<div style="margin-bottom: 10%"> </div>
+
+{% endblock %}

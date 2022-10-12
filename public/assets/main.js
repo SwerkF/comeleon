@@ -29,8 +29,8 @@ if(prestations){
         }
     });
 }
+
 const avis = document.getElementById('avis');
-console.log(avis);
 
 if(avis){
     avis.addEventListener('click', (e) => {
@@ -45,3 +45,4 @@ if(avis){
         }
     });
 }
+
