@@ -75,6 +75,12 @@ Lancer le serveur
   symfony serve:start
 ```
 
+Se rendre sur la page :
+
+```bash
+Utilisez l'url suivant : 127.0.0.1:8000/site
+```
+
 
 ## Appendix 🗒️
 
