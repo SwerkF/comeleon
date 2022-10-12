@@ -15,7 +15,6 @@ function type() {
 
 
 const prestations = document.getElementById('prestations');
-console.log(prestations)
 
 if(prestations){
     prestations.addEventListener('click', (e) => {
@@ -23,16 +22,15 @@ if(prestations){
             if(confirm('Voulez vous supprimer cette prestation?')){
                 const id = e.target.getAttribute('data-id');
     
-                fetch(`/menu/pr
-                estation/delete/${id}`, {
+                fetch(`/menu/prestation/delete/${id}`, {
                     method: 'DELETE'
                 }).then(res => window.location.reload());
             }
         }
     });
 }
+
 const avis = document.getElementById('avis');
-console.log(avis);
 
 if(avis){
     avis.addEventListener('click', (e) => {
