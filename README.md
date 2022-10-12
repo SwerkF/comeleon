@@ -65,6 +65,7 @@ composer install
 ```
 
 Installer la base de données:
+
 Rendez vous sur votre serveur local avec phpmyadmin (XAMPP, MAMP ou WAMP) et créez une base de données nommée "site". Importez ensuite le fichier .sql disponible dans le projet (site.sql).
 
 Lancer le serveur
