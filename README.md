@@ -27,9 +27,9 @@ Le site est géré par les élements suivants :
 Ce projet sera à rendre au plus tard le 12/08/2022 à 20h au client. 
 ## Auteurs 😎
 [![GitHub watchers](https://badgen.net/github/watchers/SwerkF/colemeon)](https://GitHub.com/Naereen/StrapDown.js/watchers/)
-- [@duchenec-coder](https://github.com/duchenec-coder) Clément
-- [@thomasl28500](https://github.com/thomasl28500) Thomas
-- [@Swerk](https://github.com/SwerkF) Oliwer
+- [@duchenec-coder](https://github.com/duchenec-coder) Clément DUCHENE
+- [@thomasl28500](https://github.com/thomasl28500) Thomas LETELLIER
+- [@Swerk](https://github.com/SwerkF) Oliwer SKWERES
 
 
 ## Features 🧠
@@ -64,10 +64,21 @@ Installer les outils nécessaire pour composer
 composer install
 ```
 
+Installer la base de données:
+```bash
+Rendez vous sur votre serveur local avec phpmyadmin (XAMPP, MAMP ou WAMP) et créez une base de données nommée "site". Importez ensuite le fichier .sql disponible dans le projet (site.sql).
+```
+
 Lancer le serveur
 
 ```bash
   symfony serve:start
+```
+
+Se rendre sur la page :
+
+```bash
+Utilisez l'url suivant : 127.0.0.1:8000/site
 ```
 
 

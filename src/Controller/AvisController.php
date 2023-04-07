@@ -31,21 +31,18 @@ class AvisController extends AbstractController
         ))
         ->getForm();
         $form->handleRequest($request);
+        $avis3 = new Avis();
         if ($form->isSubmitted() && $form->isValid()) {
             $avis = $form->getData();
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($avis2);
             $entityManager->flush();
 
-            $avis3 = new Avis();
+           
         $repo = $this->getDoctrine()->getRepository(Avis::class);
         $avis3=$repo->findAll();
            
-            return $this->render('avis/index.html.twig', [
-                'controller_name' => 'AvisController',
-                'avis2' => $avis3,
-                'form'=>$form->createView()
-            ]);
+        return $this->redirectToRoute('app_avis');
 
            
         }
