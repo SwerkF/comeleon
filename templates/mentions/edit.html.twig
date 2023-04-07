@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MentionsController!{% endblock %}
+
+{% block body %}
+    {% if app.user %}
+        {% if app.user.email != "admin@cable.fr" %}
+                <script>
+        function redirect() {
+            document.location.replace("{{ path('app_site') }}")
+        }
+        redirect();
+    </script>
+        {% endif %}
+    {% endif %}
+<div class="container glass-bg mb-5 pt-5 pb-5" style="margin-top:80px">
+    <h2 style="font-weight:700"> Modification de la presentation personnelle</h2>
+     {{ form_start(form) }}
+    <div data-aos="fade-up">
+        <span style="font-size: 20px; font-weight:600; color:black">Nom</span><br>
+        {{ form_widget(form.nom, { 'attr' : { 'class': 'form-control' } } ) }}
+        <br>
+        <span style="font-size: 20px; font-weight:600; color:black">Adresse</span><br>
+        {{ form_widget(form.adresse, { 'attr' : { 'class': 'form-control' } } ) }}
+        <br>
+        <span style="font-size: 20px; font-weight:600; color:black">Propriétaire</span><br>
+        {{ form_widget(form.proprio, { 'attr' : { 'class': 'form-control' } } ) }}
+        <br>
+        <span style="font-size: 20px; font-weight:600; color:black">Responsable</span><br>
+        {{ form_widget(form.responsable, { 'attr' : { 'class': 'form-control' } } ) }}
+        <br>
+        <span style="font-size: 20px; font-weight:600; color:black">Conception</span><br>
+        {{ form_widget(form.conception, { 'attr' : { 'class': 'form-control' } } ) }}
+        <br>
+        <span style="font-size: 20px; font-weight:600; color:black">Animation</span><br>
+        {{ form_widget(form.animation, { 'attr' : { 'class': 'form-control' } } ) }}
+        <br>
+        <span style="font-size: 20px; font-weight:600; color:black">Hebergement</span><br>
+        {{ form_widget(form.hebergement, { 'attr' : { 'class': 'form-control' } } ) }}
+        <br>
+    </div>
+     {{ form_end(form) }}
+    <br>
+    
+    
+</div>
+{% endblock %}

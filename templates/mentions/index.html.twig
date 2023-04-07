@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MentionsController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+
+
+    <div class="container glass-bg" style="margin-top: 20px">
+
+    <h1>Mentions légales</h1>
+        {% if app.user %}
+        {% if app.user.email == "admin@cable.fr" %}
+            <a href="/mentions/edit" class="btn btn-primary">Gestion de l'identité</a>
+        {% endif %}
+    {% endif %}
+        <div class="row">
+            <div style="font-weight: 500; font-size: 0.8em; color:#000000"><br>
+                <span style="font-weight: 700">Nom du site web</span>: {{ mentions[0].nom }} <br>
+                 <span style="font-weight: 700">Adresse</span>: {{ mentions[0].adresse }}<br>
+                 <span style="font-weight: 700">Propriétaire</span>: {{ mentions[0].proprio }}}<br>
+                 <span style="font-weight: 700">Reponsable de publication</span>: {{ mentions[0].responsable }}<br>
+                 <span style="font-weight: 700">Conception</span> : {{ mentions[0].conception }}<br>
+                 <span style="font-weight: 700">Animation</span>: {{ mentions[0].animation }}<br>
+                 <span style="font-weight: 700">Hébergement</span>: {{ mentions[0].hebergement }}<br>
+
+
+<br>
+                <p>CONDITIONS D&rsquo;UTILISATION<br /><br />
+L&rsquo;utilisation du pr&eacute;sent site implique l&rsquo;acceptation pleine et enti&egrave;re des conditions g&eacute;n&eacute;rales d&rsquo;utilisation d&eacute;crites ci-apr&egrave;s. Ces conditions d&rsquo;utilisation sont susceptibles d&rsquo;&ecirc;tre modifi&eacute;es ou compl&eacute;t&eacute;es &agrave; tout moment.<br /><br />
+INFORMATIONS<br /><br />
+Les informations et documents du site sont pr&eacute;sent&eacute;s &agrave; titre indicatif, n&rsquo;ont pas de caract&egrave;re exhaustif, et ne peuvent engager la responsabilit&eacute; du propri&eacute;taire du site.<br /><br />
+Le propri&eacute;taire du site ne peut &ecirc;tre tenu responsable des dommages directs et indirects cons&eacute;cutifs &agrave; l&rsquo;acc&egrave;s au site.<br /><br />
+INTERACTIVIT&Eacute;<br /><br />
+Les utilisateurs du site peuvent y d&eacute;poser du contenu, apparaissant sur le site dans des espaces d&eacute;di&eacute;s (notamment via les commentaires). Le contenu d&eacute;pos&eacute; reste sous la responsabilit&eacute; de leurs auteurs, qui en assument pleinement l&rsquo;enti&egrave;re responsabilit&eacute; juridique.<br /><br />
+Le propri&eacute;taire du site se r&eacute;serve n&eacute;anmoins le droit de retirer sans pr&eacute;avis et sans justification tout contenu d&eacute;pos&eacute; par les utilisateurs qui ne satisferait pas &agrave; la charte d&eacute;ontologique du site ou &agrave; la l&eacute;gislation en vigueur.<br /><br />
+PROPRI&Eacute;T&Eacute; INTELLECTUELLE<br /><br />
+Sauf mention contraire, tous les &eacute;l&eacute;ments accessibles sur le site (textes, images, graphismes, logo, ic&ocirc;nes, sons, logiciels, etc.) restent la propri&eacute;t&eacute; exclusive de leurs auteurs, en ce qui concerne les droits de propri&eacute;t&eacute; intellectuelle ou les droits d&rsquo;usage.<br /><br />
+Toute reproduction, repr&eacute;sentation, modification, publication, adaptation de tout ou partie des &eacute;l&eacute;ments du site, quel que soit le moyen ou le proc&eacute;d&eacute; utilis&eacute;, est interdite, sauf autorisation &eacute;crite pr&eacute;alable de l&rsquo;auteur.<br /><br />
+Toute exploitation non autoris&eacute;e du site ou de l&rsquo;un quelconque des &eacute;l&eacute;ments qu&rsquo;il contient est consid&eacute;r&eacute;e comme constitutive d&rsquo;une contrefa&ccedil;on et poursuivie.<br /><br />
+Les marques et logos reproduits sur le site sont d&eacute;pos&eacute;s par les soci&eacute;t&eacute;s qui en sont propri&eacute;taires.<br /><br />
+LIENS<br /><br />
+Liens sortants<br /><br />
+Le propri&eacute;taire du site d&eacute;cline toute responsabilit&eacute; et n&rsquo;est pas engag&eacute; par le r&eacute;f&eacute;rencement via des liens hypertextes, de ressources tierces pr&eacute;sentes sur le r&eacute;seau Internet, tant en ce qui concerne leur contenu que leur pertinence.<br /><br />
+Liens entrants<br /><br />
+Le propri&eacute;taire du site autorise les liens hypertextes vers l&rsquo;une des pages de ce site, &agrave; condition que ceux-ci ouvrent une nouvelle fen&ecirc;tre et soient pr&eacute;sent&eacute;s de mani&egrave;re non &eacute;quivoque afin d&rsquo;&eacute;viter :<br /><br />
+&#61607; tout risque de confusion entre le site citant et le propri&eacute;taire du site<br /><br />
+&#61607; ainsi que toute pr&eacute;sentation tendancieuse, ou contraire aux lois en vigueur.<br /><br />
+Le propri&eacute;taire du site se r&eacute;serve le droit de demander la suppression d&rsquo;un lien s&rsquo;il estime que le site source ne respecte pas les r&egrave;gles ainsi d&eacute;finies.<br /><br />
+CONFIDENTIALIT&Eacute;<br /><br />
+Tout utilisateur dispose d&rsquo;un droit d&rsquo;acc&egrave;s, de rectification et d&rsquo;opposition aux donn&eacute;es personnelles le concernant, en effectuant sa demande &eacute;crite et sign&eacute;e, accompagn&eacute;e d&rsquo;une preuve d&rsquo;identit&eacute;. <br /><br />
+Le site ne recueille pas d&rsquo;informations personnelles, et n&rsquo;est pas assujetti &agrave; d&eacute;claration &agrave; la CNIL. <br /><br />
+CR&Eacute;DITS<br /><br />
+< cr&eacute;dits photo, icones, etc. ><br /><br />
+Articles L111-1 et suivants du Code de la Propri&eacute;t&eacute; Intellectuelle du 1er juillet 1992 <br />
+Article 41 de la loi du 11 mars 1957 <br />
+Article L. 226-13 du Code p&eacute;nal et la Directive Europ&eacute;enne du 24 octobre 1995 <br />
+Articles L.335-2 et suivants du Code de Propri&eacute;t&eacute; Intellectuelle <br />
+Loi n&deg; 78-87 du 6 janvier 1978, modifi&eacute;e par la loi n&deg; 2004-801 du 6 ao&ucirc;t 2004, relative &agrave; l&rsquo;informatique, aux fichiers et aux libert&eacute;s <br />
+Articles 38 et suivants de la loi 78-17 du 6 janvier 1978 relative &agrave; l&rsquo;informatique, aux fichiers et aux libert&eacute;s <br />
+Loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative &agrave; la protection juridique des bases de donn&eacute;es <br />
+Loi n&deg; 2004-801 du 6 ao&ucirc;t 2004 <br />
+Article 6 de la loi n&deg; 2004-575 du 21 juin 2004 pour la confiance dans l&rsquo;&eacute;conomie num&eacute;rique <br />
+</p>
+
+            </div>
+        </div>
+    </div>
+   
+</div>
+{% endblock %}

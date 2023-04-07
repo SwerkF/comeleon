@@ -132,9 +132,9 @@ class MenuController extends AbstractController
             ],
         ])
         ->add('prix', TextType::class)
-        ->add('save', SubmitType::class, array(
-            'label' => 'Appliquer',
-            'attr' => array('class' => 'btn btn-success btn-block'),
+        ->add('save', SubmitType::class, array('label'=>'Enregistrer',
+        'attr'=>array('class'=>'btn')
+           
         ))
         ->getForm();
         $form->handleRequest($request);
